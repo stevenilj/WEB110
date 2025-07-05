@@ -1,0 +1,164 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+}
+/*Resets spacing and makes sizing more predictable.
+(Everything on the page)*/
+
+body {
+font-family: Arial;
+background-color: #f8f8f8;
+color: #333;
+line-height: 1.6; 
+}
+/*Sets font, light gray background, dark text, and better line spacing.
+(Whole page)*/
+
+header {
+background-color: #b22234;
+color: white;
+padding: 20px;
+text-align: center; 
+}
+/*Makes the top of the page red with white text, centered and padded.
+(Page header)*/
+
+h1 { 
+  font-size: 2em; 
+}
+/*Makes the main title bigger.
+(Page title)*/
+
+nav { 
+  margin-top: 15px; 
+}
+/*Adds space above the navigation bar.
+(Navigation bar)*/
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    flex-direction: row; /* Horizontal */
+    margin: 0; 
+}
+
+nav ul li {
+  /* Styling for horizontal list items */
+  margin-right: 10px; /* Example spacing */
+}
+
+.nav {
+display: flex;
+justify-content: center;
+list-style: none;
+gap: 20px;
+padding: 10px 0; 
+}
+/*Turns the nav into a flex row, but doesnt removes bullets, spaces out links.
+(Navigation menu)*/
+
+.nav li a {
+text-decoration: none;
+color: #f4eff0;
+font-weight: bold; 
+}
+.nav {
+display: flex;
+justify-content: center;
+list-style: none;
+gap: 20px;
+padding: 10px 0; 
+}
+/*Makes nav links bold, white, and removes underlines.
+(Nav links)*/
+
+.hero-image {
+width: 100%;
+max-height: 200px;
+object-fit: cover;
+border-radius: 10px;
+margin-bottom: 20px; 
+}
+/*Makes the fireworks image full-width, keeps it neat, 
+adds rounded corners.((((Decided to try out a flex container below))))
+(Fireworks image)*/
+
+.flex-container {
+  display: flex;
+  /* other flexbox properties like justify-content */
+  align-items: flex-start; /* or align-items: center; for vertical centering */
+}
+
+.flex-container div {
+  flex-shrink: 1; /* Allow the image container to shrink if needed */
+}
+
+.flex-container img {
+  width: 100%; /* Image takes full width of its parent */
+  height: 200px; /* Maintain aspect ratio */
+  margin-bottom: 20px; 
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.flexbox-image {
+width: 50%;
+max-width: 300px;
+display: block;
+margin: 20px auto;
+border: 1px solid #ccc;
+border-radius: 2px; 
+}
+/*Centers and resizes the Flexbox diagram, adds border.
+(Flexbox guide image)*/
+
+main { 
+ padding: 0px;
+}
+/*Adds space around the main content.
+(Main page content)*/
+
+section { 
+  margin-bottom: 20px; 
+}
+/*Adds space between each content section.
+(All sections)*/
+
+footer { 
+  background-color: #333; 
+  color: white; 
+  text-align: center; 
+  padding: 10px; 
+}
+/*Makes the bottom dark gray with white text, centered.
+(Footer)*/
+
+nav ul {
+  display: flex;
+  flex-direction: row; /* Horizontal */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  /* Styling for horizontal list items */
+  margin-right: 10px; /* Example spacing */
+}
+
+/* Vertical layout for smaller screens */
+@media (max-width: 800px) {
+  nav ul {
+    flex-direction: column; /* Vertical */
+  }
+
+  nav ul li {
+    display: block; /* Stack vertically */
+    width: 100%; /* Make them full width */
+    margin-right: 0; /* Remove horizontal spacing */
+    margin-bottom: 5px; /* Example spacing */
+  }
+}
