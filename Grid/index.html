@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 great places</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background: linear-gradient(9deg, #d4d2d6, #200b30); /* Corrected background property */
+            padding: 15px;
+            border: 2px solid #190329;
+            border-radius: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff; /* Using hexadecimal for color consistency */
+            min-height: 100vh;
+        }
+
+        h1, h2 {
+            font-size: 3vh;
+            padding: 2vh;
+        }
+
+        h2 {
+            border-bottom: 2px solid #25053a;
+            margin-bottom: 10px;
+        }
+
+        .grid-wrapper {
+            display: grid;
+            gap: 10px; /* or grid-gap: 10px; */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            grid-auto-flow: dense;
+        }
+
+        .grid-container {
+            display: grid; /* Establish a grid formatting context */
+            grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+            grid-auto-rows: minmax(100px, auto); /* Set a minimum height for rows, letting them adjust to content */
+            gap: 10px; /* Add spacing between grid items */
+        }
+
+        .grid-item {
+            background-color: lightblue;
+            border: 1px solid blue;
+            padding: 10px;
+        }
+
+        .wide {
+            grid-column: span 2; /* Make the item span 2 columns */
+        }
+
+        .tall {
+            grid-row: span 2; /* Make the item span 2 rows */
+        }
+
+        .big {
+            grid-column: span 2; /* Span 2 columns */
+            grid-row: span 2; /* Span 2 rows */
+        }
+
+        figure {
+            margin: 0;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 2px solid #190329;
+            background: #2a1f46;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            flex-grow: 1;
+            display: block;
+            border-bottom: 1px solid #190329;
+        }
+
+        figcaption {
+            padding: 8px 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Added a background-color for figcaption */
+            color: white; /* Added text color for readability */
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header> 
+    <h1> A top 10 list of places to visit in the US according to Travel Advisor</h1>
+        <h2> What are your top 10?</h2>
+ </header>
+
+
+     <div class="grid-wrapper">
+
+        <figure>
+            <img src="Grid/empirestate.jpg" alt="Empire State Building">
+            <figcaption>Empire State Building</figcaption>
+        </figure>
+
+         <figure>
+            <img src="Grid/washingtondc.png" alt="Washington DC">
+            <figcaption>Washington DC</figcaption>
+        </figure>
+
+         <figure class="tall">
+            <img src="Grid/sanfran.jpg" alt="San Francisco">
+            <figcaption>San Francisco</figcaption>
+        </figure>
+          <figure class="big">
+        <img src="Grid/lasvegas.jpg" alt="Las Vegas">
+        <figcaption>Las Vegas</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="Grid/orlando.png" alt="Orlando">
+        <figcaption>Orlando</figcaption>
+      </figure>
+      <figure class="tall">
+        <img src="Grid/niagra.jpg" alt="Niagara Falls">
+        <figcaption>Niagara Falls</figcaption>
+      </figure>
+       <figure>
+        <img src="Grid/miami.jpg" alt="Miami">
+        <figcaption>Miami</figcaption>
+      </figure>
+      <figure class="big">
+        <img src="Grid/grandcanyon.jpg" alt="Grand Canyon">
+        <figcaption>Grand Canyon</figcaption>
+      </figure>
+      <figure class="big">
+        <img src="Grid/yellowstone.webp" alt="Yellowstone National Park">
+        <figcaption>Yellowstone National Park</figcaption>
+      </figure>
+      <figure class="big">
+        <img src="Grid/sandiego.jpg" alt="San Diego">
+        <figcaption>San Diego</figcaption>
+      </figure>
+</div>
+</body>
+</html>
