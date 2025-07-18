@@ -1,0 +1,111 @@
+/* Name: Steven D. Caldwell*/
+/* Date: 07/18/2025*/
+/* Subject: Main Stylesheet */
+
+a{
+    color: white;
+}
+
+body {
+    font-size: 1em; /* Base font size */
+    }
+
+#wrapper { /* Wrapper container for the entire website */
+    /* Styles for the wrapper */
+    width: 90%; /* Example width, can be adjusted */
+    margin: 0 auto; /* Center the wrapper */
+    }
+#wrapper1 { /* Wrapper container for the entire website */
+    /* Styles for the wrapper */
+    width: 100%; /* Example width, can be adjusted */
+    height: 100%;
+    margin: 0 auto; /* Center the wrapper */
+    text-align: center;
+    }
+
+nav ul { /* Styles for the navigation menu */
+       /* Styles for the unordered list */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange list items horizontally */
+    }
+
+nav li {
+    margin-right: 1em; /* Spacing between navigation items */
+    }
+
+nav a {
+    display: block; /* Make the entire link clickable */
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #ffffff;
+    }
+
+.column-left {
+    width: 60%; /* Example column width */
+    float: left; /* Arrange columns side-by-side */
+    padding: 10px; /* Small padding in px */
+    }
+
+.column-right {
+    width: 35%; /* Example column width */
+    float: right;
+    padding: 5px; /* Small padding in px */
+    margin-top: 12px;
+    color: rgb(245, 244, 244);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.227);
+    }
+
+footer {
+    clear: both; /* Ensure footer appears below floated columns */
+    background-color: rgba(0, 0, 0, 0.227);
+    }
+h2 {
+    color: rgb(49, 166, 255);
+
+}
+    
+img {
+    max-width: 100%; /* Flexible images */
+    height: auto;
+    }
+/* styles.css (example color scheme) */
+
+body {
+    background-color: rgb(40, 40, 40);
+    color: #f5f4f4; /* Dark text for contrast */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    }
+
+header {
+    color: rgb(238, 236, 236);
+    text-align: center;
+    
+    }
+
+nav {
+    color: #f5f4f4;
+    background-color: rgba(0, 0, 0, 0.227);
+    }
+
+nav a {
+    color: white;
+    }
+
+nav a:hover {
+    background-color: rgba(49, 166, 255, 0.968);/* Hover effect */
+    }
+
+
+/* Media Query for Phone-sized Viewports (example) */
+@media only screen and (max-width: 768px) {
+    .column-left,
+    .column-right {
+        width: 100%;
+        float: none;
+        }
+    }
