@@ -113,6 +113,7 @@ nav a:hover {
     float: right;                          /* Float to right side */
     padding: 5px;                          /* Less padding than left column */
     margin-top: 12px;                      /* Push down from top */
+    margin-bottom: 12px;                   /* Push down from bottom */
     color: rgb(245, 244, 244);            /* Light gray text */
     text-align: center;                    /* Center-align sidebar content */
     background-color: rgba(0, 0, 0, 0.227); /* Semi-transparent dark background */
