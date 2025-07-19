@@ -99,7 +99,34 @@ nav a {
 nav a:hover {
     background-color: rgba(49, 166, 255, 0.968);/* Hover effect */
     }
-
+  /* Data table styles */
+        .careers-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .careers-table th,
+        .careers-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .careers-table th {
+            background-color: #232523;
+            color: white;
+            font-weight: bold;
+        }
+        .careers-table tr:nth-child(even) {
+            background-color: #232523;
+        }
+        .careers-table tr:hover {
+            background-color: #232523;
+        }
+        .salary {
+            font-weight: bold;
+            color: rgba(49, 166, 255, 0.968);
+        }
 
 /* Media Query for Phone-sized Viewports (example) */
 @media only screen and (max-width: 768px) {
