@@ -1,138 +1,190 @@
 /* Name: Steven D. Caldwell*/
-/* Date: 07/18/2025*/
+/* Date: 07/18/2024*/
 /* Subject: Main Stylesheet */
 
-a{
-    color: white;
+/* ========================================
+   BASE STYLES & RESET
+   ======================================== */
+
+/* Main body styling - sets foundation for entire site */
+body {
+    font-size: 1em;                        /* Base font size (16px default) */
+    background-color: rgb(40, 40, 40);     /* Dark gray background */
+    color: #f5f4f4;                        /* Light gray text for contrast */
+    text-align: center;                    /* Center-align all content by default */
+    margin: 0;                             /* Remove default browser margins */
+    padding: 0;                            /* Remove default browser padding */
 }
 
-body {
-    font-size: 1em; /* Base font size */
-    }
+/* Global link styling */
+a {
+    color: white;                          /* White links for visibility on dark background */
+}
 
-#wrapper { /* Wrapper container for the entire website */
-    /* Styles for the wrapper */
-    width: 90%; /* Example width, can be adjusted */
-    margin: 0 auto; /* Center the wrapper */
-    }
-#wrapper1 { /* Wrapper container for the entire website */
-    /* Styles for the wrapper */
-    width: 100%; /* Example width, can be adjusted */
-    height: 100%;
-    margin: 0 auto; /* Center the wrapper */
-    text-align: center;
-    }
-
-nav ul { /* Styles for the navigation menu */
-       /* Styles for the unordered list */
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Arrange list items horizontally */
-    }
-
-nav li {
-    margin-right: 1em; /* Spacing between navigation items */
-    }
-
-nav a {
-    display: block; /* Make the entire link clickable */
-    padding: 0.5em 1em;
-    text-decoration: none;
-    color: #ffffff;
-    }
-
-.column-left {
-    width: 60%; /* Example column width */
-    float: left; /* Arrange columns side-by-side */
-    padding: 10px; /* Small padding in px */
-    }
-
-.column-right {
-    width: 35%; /* Example column width */
-    float: right;
-    padding: 5px; /* Small padding in px */
-    margin-top: 12px;
-    color: rgb(245, 244, 244);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.227);
-    }
-
-footer {
-    clear: both; /* Ensure footer appears below floated columns */
-    background-color: rgba(0, 0, 0, 0.227);
-    }
+/* Main heading styling */
 h2 {
-    color: rgb(49, 166, 255);
-
+    color: rgb(49, 166, 255);             /* Blue accent color for headings */
 }
-    
+
+/* Responsive image settings */
 img {
-    max-width: 100%; /* Flexible images */
-    height: auto;
-    }
-/* styles.css (example color scheme) */
+    max-width: 100%;                       /* Images scale down to fit container */
+    height: auto;                          /* Maintain aspect ratio when scaling */
+}
 
-body {
-    background-color: rgb(40, 40, 40);
-    color: #f5f4f4; /* Dark text for contrast */
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    }
+/* ========================================
+   LAYOUT CONTAINERS
+   ======================================== */
 
+/* Main wrapper - contains most page content */
+#wrapper {
+    width: 90%;                            /* 90% of viewport width */
+    margin: 0 auto;                        /* Center the wrapper horizontally */
+}
+
+/* Secondary wrapper - full width container */
+#wrapper1 {
+    width: 100%;                           /* Full viewport width */
+    height: 100%;                          /* Full viewport height */
+    margin: 0 auto;                        /* Center horizontally (redundant at 100% width) */
+    text-align: center;                    /* Center-align content inside */
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+/* Header styling */
 header {
-    color: rgb(238, 236, 236);
-    text-align: center;
-    
-    }
+    color: rgb(238, 236, 236);            /* Light gray text for header */
+    text-align: center;                    /* Center-align header content */
+}
 
+/* ========================================
+   NAVIGATION MENU
+   ======================================== */
+
+/* Main navigation container */
 nav {
-    color: #f5f4f4;
-    background-color: rgba(0, 0, 0, 0.227);
-    }
+    color: #f5f4f4;                        /* Light text color */
+    background-color: rgba(0, 0, 0, 0.227); /* Semi-transparent black background */
+}
 
+/* Navigation list - removes default list styling */
+nav ul {
+    list-style: none;                      /* Remove bullet points */
+    padding: 0;                            /* Remove default padding */
+    margin: 0;                             /* Remove default margin */
+    display: flex;                         /* Arrange items horizontally */
+}
+
+/* Individual navigation items */
+nav li {
+    margin-right: 1em;                     /* Space between navigation items */
+}
+
+/* Navigation links styling */
 nav a {
-    color: white;
-    }
+    display: block;                        /* Make entire area clickable */
+    padding: 0.5em 1em;                    /* Internal spacing (top/bottom, left/right) */
+    text-decoration: none;                 /* Remove underline from links */
+    color: #ffffff;                        /* White text for visibility */
+}
 
+/* Navigation hover effect */
 nav a:hover {
-    background-color: rgba(49, 166, 255, 0.968);/* Hover effect */
-    }
-  /* Data table styles */
-        .careers-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 14px;
-        }
-        .careers-table th,
-        .careers-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .careers-table th {
-            background-color: #232523;
-            color: white;
-            font-weight: bold;
-        }
-        .careers-table tr:nth-child(even) {
-            background-color: #232523;
-        }
-        .careers-table tr:hover {
-            background-color: #232523;
-        }
-        .salary {
-            font-weight: bold;
-            color: rgba(49, 166, 255, 0.968);
-        }
+    background-color: rgba(49, 166, 255, 0.968); /* Blue background on hover */
+}
 
-/* Media Query for Phone-sized Viewports (example) */
+/* ========================================
+   COLUMN LAYOUT SYSTEM
+   ======================================== */
+
+/* Left column - main content area */
+.column-left {
+    width: 65%;                            /* Takes up 65% of container width */
+    float: left;                           /* Float to left side */
+    padding: 10px;                         /* Internal spacing */
+}
+
+/* Right column - sidebar content */
+.column-right {
+    width: 30%;                            /* Takes up 30% of container width */
+    float: right;                          /* Float to right side */
+    padding: 5px;                          /* Less padding than left column */
+    margin-top: 12px;                      /* Push down from top */
+    color: rgb(245, 244, 244);            /* Light gray text */
+    text-align: center;                    /* Center-align sidebar content */
+    background-color: rgba(0, 0, 0, 0.227); /* Semi-transparent dark background */
+}
+
+/* ========================================
+   FOOTER SECTION
+   ======================================== */
+
+/* Footer styling */
+footer {
+    clear: both;                           /* Ensure footer appears below floated columns */
+    background-color: rgba(0, 0, 0, 0.227); /* Semi-transparent dark background */
+}
+
+/* ========================================
+   DATA TABLE STYLES
+   ======================================== */
+
+/* Main table container */
+.careers-table {
+    width: 100%;                           /* Full width of parent container */
+    border-collapse: collapse;             /* Remove spacing between table cells */
+    margin: 20px 0;                        /* Vertical spacing above and below table */
+    font-size: 14px;                       /* Smaller font size for table data */
+}
+
+/* Table cells (both headers and data) */
+.careers-table th,
+.careers-table td {
+    border: 1px solid #ddd;                /* Light gray border around cells */
+    padding: 12px;                         /* Internal cell spacing */
+    text-align: left;                      /* Left-align text in cells */
+}
+
+/* Table header styling */
+.careers-table th {
+    background-color: #232523;             /* Dark background for headers */
+    color: white;                          /* White text for contrast */
+    font-weight: bold;                     /* Bold text for emphasis */
+}
+
+/* Alternating row colors for better readability */
+.careers-table tr:nth-child(even) {
+    background-color: #232523;             /* Dark background for even rows */
+}
+
+/* Row hover effect for interactivity */
+.careers-table tr:hover {
+    background-color: #232523;             /* Dark background on hover */
+}
+
+/* Special styling for salary information */
+.salary {
+    font-weight: bold;                     /* Bold text for emphasis */
+    color: rgba(49, 166, 255, 0.968);     /* Blue color to highlight salary data */
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE STYLES
+   ======================================== */
+
+/* Mobile and tablet breakpoint */
 @media only screen and (max-width: 768px) {
+    /* Stack columns vertically on smaller screens */
     .column-left,
     .column-right {
-        width: 100%;
-        float: none;
-        }
+        width: 100%;                       /* Full width on mobile */
+        float: none;                       /* Remove floating behavior */
     }
+}
+
+/* ========================================
+   END OF STYLESHEET
+   ======================================== */
